@@ -9,7 +9,7 @@
     --burgerline_height: 6px;
     --burgerline_margin: 5px;
     
-    --background_color: rgb(255, 255, 255);
+    --background_color: rgb(255, 17, 17);
 }
 
 #grid_wrapper_index {
@@ -31,6 +31,8 @@ header {
 
 .h1_head {
     margin: 10px;
+    list-style: none;
+    text-decoration: none;
 }
 
 #sec1 {
@@ -39,7 +41,6 @@ header {
     background-image: url(/img/sunrise_main.jpg);
     display: grid;  
     grid-area: se1;
-
     grid-column: 1 / span 3;
 }
 
@@ -66,7 +67,7 @@ header {
     background-image: url(/img/aventyr_thumbnail.jpg);
 }
 
-footer {
+.foot_index {
     background-color: #F8F0E4;
     grid-column: 1 / span 3;
 }
@@ -141,4 +142,77 @@ nav {
 #burger {
     margin-right: 80px;
     cursor: pointer;
+}
+
+
+
+#grid_wrapper_budget {
+    display: grid;
+    min-height: 100vh;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 500px minmax(100px, 1fr);
+    grid-template-areas:
+    "se5 se5 se5"
+    "se6 se6 se6"
+    "se7 se8 se9"
+    "se10 se11 se12";
+}
+
+#sec5 {
+    background-color: blueviolet;
+    margin: 25px;
+    margin-top: 0px;
+    display: grid;  
+    grid-area: se5;
+    grid-column: 1 / span 3;
+}
+
+#sec6 {
+    background-color: blue;
+    grid-area: se6;
+    grid-column: 1 / span 3;
+    margin: 25px;
+    margin-top: 0px;
+}
+
+#sec7 {
+    background-color: rgb(255, 0, 140);
+    grid-area: se7;
+    margin-top: 20px;
+
+}
+
+#sec8 {
+    background-color: rgb(0, 255, 136);
+    grid-area: se8;
+    margin: 20px;
+}
+
+#sec9 {
+    background-color: rgb(255, 0, 221);
+    grid-area: se9;
+    margin: 20px;
+}
+
+#sec10 {
+    background-color: rgb(140, 255, 0);
+    grid-area: se10;
+    margin: 20px;
+}
+
+#sec11 {
+    background-color: rgb(255, 162, 0);
+    grid-area: se11;
+    margin: 20px;
+}
+
+#sec12 {
+    background-color: rgb(255, 0, 0);
+    grid-area: se12;
+    margin: 20px;
+}
+
+.foot_budget {
+    background-color: #F8F0E4;
+    grid-column: 1 / span 3;
 }
