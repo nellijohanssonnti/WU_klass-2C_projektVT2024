@@ -9,17 +9,31 @@
     --burgerline_height: 6px;
     --burgerline_margin: 5px;
     
-    --background_color: rgb(255, 17, 17);
+    --background_color: rgb(255, 255, 255);
+}
+
+body {
+    max-width: 100%;
+    margin: 0;
+}
+
+.airplane_icon {
+    height: 40px;
+    width: auto;
+    position: relative;
+    padding-left: 13px;
+}
+
+#link_list {
+    font-family: 'PT Sans', sans-serif;
 }
 
 #grid_wrapper_index {
-    display: grid;
-    min-height: 100vh;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 500px minmax(100px, 1fr);
-    grid-template-areas:
-    "se1 se1 se1"
-    "se2 se3 se4";
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
 }
 
 header {
@@ -27,6 +41,7 @@ header {
     display: flex;
     margin-top: 25px;
     margin-left: 25px;
+    text-align: center;
 }
 
 .h1_head {
@@ -35,42 +50,78 @@ header {
     text-decoration: none;
 }
 
+#h1_head {
+    font-family: 'PT Sans', sans-serif;
+    color: black;
+    font-size: 3vw;
+}
+
+.front_imgs {
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+    font-family: 'PT Sans', sans-serif;
+    margin-bottom: 25px;
+}
+
+.headline_front{
+    text-decoration: none;
+    font-family: 'PT Sans', sans-serif;
+    margin: 10px 0 25px 0;
+    color: black;
+}
+
+a {
+    text-decoration: none;
+}
+
 #sec1 {
-    margin: 25px;
     margin-top: 0px;
-    background-image: url(/img/sunrise_main.jpg);
-    display: grid;  
-    grid-area: se1;
-    grid-column: 1 / span 3;
+}
+
+#section_2{
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+
 }
 
 #sec2 {
-    background-color: blue;
     grid-area: se2;
     height: 480px;
-    margin: 20px;
+    margin: 10px;
     background-image: url(/img/buget_thumbnail.jpg);
 }
 
 #sec3 {
-    background-color: rgb(255, 0, 140);
     grid-area: se3;
     margin-top: 20px;
     margin-bottom: 20px;
+    height: 480px;
     background-image: url(/img/fler_main.jpg);
 }
 
 #sec4 {
-    background-color: rgb(0, 255, 136);
     grid-area: se4;
-    margin: 20px;
+    height: 480px;
+    margin: 10px;
     background-image: url(/img/aventyr_thumbnail.jpg);
 }
 
-.foot_index {
+#footer {
     background-color: #F8F0E4;
-    grid-column: 1 / span 3;
+    position: relative;
+    bottom: 0px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 150px;
+    width: 100% ;
+    margin-top:25px;
+    font-family: 'PT Sans', sans-serif;;
 }
+
 
 nav {
     height: 100px;
@@ -141,78 +192,380 @@ nav {
 
 #burger {
     margin-right: 80px;
-    cursor: pointer;
+    cursor: pointer;f
 }
 
 
 
 #grid_wrapper_budget {
     display: grid;
-    min-height: 100vh;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 500px minmax(100px, 1fr);
+    min-width: 100vw;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
     grid-template-areas:
-    "se5 se5 se5"
-    "se6 se6 se6"
-    "se7 se8 se9"
-    "se10 se11 se12";
+    "bild bild"
+    "sec6 sec6"
+    "sec7 sec7"
+    "sec9 sec9"
+    "sec11 sec11";
+    align-items: center;
 }
 
-#sec5 {
-    background-color: blueviolet;
-    margin: 25px;
-    margin-top: 0px;
-    display: grid;  
-    grid-area: se5;
-    grid-column: 1 / span 3;
+#sec_land {
+grid-area: sec6;
+height: 40px;
 }
 
-#sec6 {
-    background-color: blue;
-    grid-area: se6;
-    grid-column: 1 / span 3;
-    margin: 25px;
-    margin-top: 0px;
+#p_sec_land {
+    font-size: 22px;
+}
+
+#budget_bild {
+    grid-area: bild;
+    height: 550px;
+    background-image: url(/img/budgetsite_main_thumbnail.jpg);
+    background-size: cover;
+}
+
+#budget_titel {
+    font-size: 40px;
+    font-family: 'PT Sans', sans-serif;
+    text-align: center;
+    padding-top: 20vw;
+    color: white;
+}
+
+.p_breadtext {
+    font-size: 22px;
+    padding: 20px;
+}
+
+.h2_flera{
+    margin-top: 10px;
+}
+
+#sec_land {
+    grid-area: land;
+    grid-column: 1 / span 2;
+    grid-row: 1 / span 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#sec_land > p {
+    width: 50vw;
+    margin-top:50px;
+    margin-bottom:50px;
 }
 
 #sec7 {
-    background-color: rgb(255, 0, 140);
-    grid-area: se7;
-    margin-top: 20px;
-
-}
-
-#sec8 {
-    background-color: rgb(0, 255, 136);
-    grid-area: se8;
+    grid-area: sec7;
+    grid-column: 1 / span 2;
     margin: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
 }
-
+#sec7 > p{
+text-overflow: clip;
+width: 70vw;
+text-align: center;
+align-items: center;
+vertical-align: middle
+}
+.bild2   {
+    height: auto;
+    width: calc(50% - 45px);
+}
+#bild{
+    width: calc(100vw - 200px);
+    height: auto;
+}
 #sec9 {
-    background-color: rgb(255, 0, 221);
-    grid-area: se9;
+    grid-area: sec 9;
+    grid-column: 1 / span 2;
     margin: 20px;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+    flex-wrap: wrap;
 }
-
-#sec10 {
-    background-color: rgb(140, 255, 0);
-    grid-area: se10;
-    margin: 20px;
+#sec9 > p{
+text-overflow: clip;
+width: 50vw;
 }
-
 #sec11 {
-    background-color: rgb(255, 162, 0);
-    grid-area: se11;
+    grid-area: sec11;
+    grid-column: 1 / span 2;
     margin: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
 }
 
-#sec12 {
-    background-color: rgb(255, 0, 0);
-    grid-area: se12;
-    margin: 20px;
+#sec11 > p{
+    text-overflow: clip;
+    width: 50vw;
 }
 
-.foot_budget {
-    background-color: #F8F0E4;
-    grid-column: 1 / span 3;
+#grid_wrapper_flera {
+    display: grid;
+    min-height: 100vh;
+    grid-template-columns: 1fr;
+    grid-template-rows: 500px minmax(100px, 1fr);
+    grid-template-areas:
+    "se13"
+    "se14"
+    "se15"
+    "se16"
+    "se17"
+    "se18"
+    "se19"
+    "se20";
 }
+
+#sec13 {
+    grid-area: se13;
+    height: 550px;
+    background-image: url(/img/flera_bred.jpg);
+    background-size: cover;
+}
+
+#flera_titel {
+    font-size: 40px;
+    font-family: 'PT Sans', sans-serif;
+    text-align: center;
+    margin-top: 250px;
+    color: white;
+}
+
+#sec14 {
+    padding: 30px 0 0 0;
+    grid-area: se14;
+    margin: 25px;
+    margin-bottom: 0;
+}
+
+#sec15 {
+    grid-area: se15;
+    height: 450px;
+    width: 90vw;
+    background-image: url(/img/Sydafrika_flera.jpg);
+    margin: 50px 40px 0 60px;
+    background-size: cover;
+}
+
+#sec16 {
+    grid-area: se16;
+    margin: 15px 0 30px 60px;
+}
+
+#sec17 {
+    grid-area: se17;
+    height: 450px;
+    background-image: url(/img/budapest_budget.jpg);
+    margin-left: 60px;
+    margin-right: 40px;
+    background-size: cover;
+}
+
+#sec18 {
+    grid-area: se18;
+    margin: 15px 0 30px 40px;
+}
+
+#sec19 {
+    grid-area: se19;
+    height: 450px;
+    background-image: url(/img/Costa_rica_flera.jpg);
+    margin-left: 60px;
+    margin-right: 40px;
+    background-size: cover;
+}
+
+#sec20 {
+    grid-area: se20;
+    margin: 15px 0 30px 40px;
+}
+
+#p_sec14 {
+    font-size: 22px;
+}
+
+#berg_bild{
+    grid-area: se13;
+    height: 550px;
+    background-image: url(/img/flera_big.jpg);
+    background-size: cover;
+}
+
+#aventyr_titel {
+    font-size: 40px;
+    font-family: 'PT Sans', sans-serif;
+    text-align: center;
+    padding-top: 20vw;
+    color: white;
+}
+
+#aventyr_p{
+    margin: 30px 20px;
+    font-size: 22px;
+    padding: 20px;
+}
+
+.under_text {
+    font-size: 22px;
+}
+
+* {box-sizing:border-box}
+
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+.mySlides {
+  display: none;
+}
+
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+.text {
+  color: #f2f2f2;
+  font-size: 25px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 115px;
+  width: 100%;
+  text-align: center;
+  font-weight: bold;
+}
+
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+@media only screen and (max-width: 600px) {
+    #section_2 {
+      flex-direction: column;
+    }
+    #grid_wrapper_budget{
+        display: flex;
+        flex-direction: column;
+    }
+    #budget_bild{
+        width: 100vw;
+    }
+    #sec7{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    #sec11{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    #sec9{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    #sec7 > p{
+        width: 90vw;
+        padding: 10px;
+    }
+    #sec11 > p{
+        width: 90vw;
+        padding: 10px;
+    }
+    #sec9 > p{
+        width: 90vw;
+        padding: 10px;
+    }
+    #grid_wrapper_flera{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .p_breadtext{
+        text-align: center;
+        margin:10px;
+    }
+    .flerabilder{
+        width: 250px;
+    }
+    #sec16{
+        margin:0px;
+    }
+    #sec18{
+        margin:0px;
+    }
+    #sec15{
+        margin: 10px;
+    }
+    #sec14{
+        margin:0px;
+    }
+    #sec20{
+        margin:0px;
+    }
+    .h2_flera{
+        text-align: center;
+    }
+  }
