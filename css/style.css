@@ -13,8 +13,9 @@
 }
 
 body {
-    max-width: 100%;
+    width: 100vw;
     margin: 0;
+    overflow-x: hidden;
 }
 
 .airplane_icon {
@@ -113,15 +114,21 @@ a {
     position: relative;
     bottom: 0px;
     display: flex;
-    flex-direction: row;
     justify-content: space-evenly;
     align-items: center;
     height: 150px;
     width: 100% ;
     margin-top:25px;
-    font-family: 'PT Sans', sans-serif;;
+    font-family: 'PT Sans', sans-serif;
 }
 
+.footp {
+    margin-left: 8vw;
+}
+
+a {
+    color: black;
+}
 
 nav {
     height: 100px;
@@ -192,10 +199,8 @@ nav {
 
 #burger {
     margin-right: 80px;
-    cursor: pointer;f
+    cursor: pointer;
 }
-
-
 
 #grid_wrapper_budget {
     display: grid;
@@ -269,11 +274,11 @@ height: 40px;
     flex-wrap: wrap;
 }
 #sec7 > p{
-text-overflow: clip;
-width: 70vw;
-text-align: center;
-align-items: center;
-vertical-align: middle
+    text-overflow: clip;
+    width: 70vw;
+    text-align: center;
+    align-items: center;
+    vertical-align: middle;
 }
 .bild2   {
     height: auto;
@@ -296,6 +301,7 @@ vertical-align: middle
 text-overflow: clip;
 width: 50vw;
 }
+
 #sec11 {
     grid-area: sec11;
     grid-column: 1 / span 2;
@@ -353,7 +359,7 @@ width: 50vw;
     grid-area: se15;
     height: 450px;
     width: 90vw;
-    background-image: url(/img/Sydafrika_flera.jpg);
+    background-image: url(/img/sydafrika_flera.jpg);
     margin: 50px 40px 0 60px;
     background-size: cover;
 }
@@ -380,7 +386,7 @@ width: 50vw;
 #sec19 {
     grid-area: se19;
     height: 450px;
-    background-image: url(/img/Costa_rica_flera.jpg);
+    background-image: url(/img/costa_rica_flera.jpg);
     margin-left: 60px;
     margin-right: 40px;
     background-size: cover;
@@ -568,4 +574,4 @@ width: 50vw;
     .h2_flera{
         text-align: center;
     }
-  }
+}
